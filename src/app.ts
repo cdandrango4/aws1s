@@ -13,7 +13,19 @@ export const createApp = (): Application => {
   app.use(morgan('dev'));
   app.use(express.json());
 
-  // Rutas de salud
+  // Rutas de salud y raíz
+  app.get('/', (_req: Request, res: Response) => {
+    res.status(200).json({
+      message: 'Práctica N.° 06 - Despliegue de aplicaciones Node.js en producción (AWS, Nginx, PM2)',
+      estudiante: 'Christian Andrango',
+      status: 'UP',
+      endpoints: [
+        '/health',
+        '/api/v1/employees'
+      ]
+    });
+  });
+
   app.get('/health', (_req: Request, res: Response) => {
     res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
   });
