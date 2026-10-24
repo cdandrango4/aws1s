@@ -10,7 +10,8 @@ module.exports = {
     env: {
       NODE_ENV: "production",
       PORT: 3000,
-      MONGODB_URI: "mongodb://127.0.0.1:27017/gestion_empleados"
+      MONGODB_URI: "mongodb://127.0.0.1:27017/gestion_empleados",
+      JWT_SECRET: "UnAHeXAdEcImAL_o_FrAsE_UlTrA_SeCrEtA_Y_LaRgA_2026"
     },
 
     error_file: "/var/www/tu-app/logs/err.log",

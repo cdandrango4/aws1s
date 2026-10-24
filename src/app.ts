@@ -3,6 +3,7 @@ import type { Application, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import { createEmployeeRouter } from './routes/employee.routes';
+import { createAuthRouter } from './modules/auth/routes/auth.routes';
 import { errorHandler, AppError } from './middleware/error-handler.middleware';
 
 export const createApp = (): Application => {
@@ -29,6 +30,9 @@ export const createApp = (): Application => {
   app.get('/health', (_req: Request, res: Response) => {
     res.status(200).json({ status: 'UP', timestamp: new Date().toISOString() });
   });
+
+  // Rutas de Autenticación
+  app.use('/api/v1/auth', createAuthRouter());
 
   // Rutas de Empleados (API v1 y alias)
   const employeeRouter = createEmployeeRouter();
