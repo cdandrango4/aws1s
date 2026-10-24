@@ -26,7 +26,7 @@ module.exports = {
       repo: "git@github.com:cdandrango4/aws1s.git",
       path: "/var/www/tu-app",
       "post-deploy": "mkdir -p logs && npm install && pm2 reload ecosystem.config.cjs --env production && pm2 save",
-      ssh_options: "IdentityFile=~/.ssh/ec2practica1.pem"
+      ssh_options: "StrictHostKeyChecking=no -i C:/Users/crist/.ssh/ec2practica1.pem"
     }
   }
 };
