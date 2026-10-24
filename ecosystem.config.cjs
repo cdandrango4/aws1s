@@ -1,6 +1,7 @@
 module.exports = {
   apps: [{
     name: "mi-node-app",
+    cwd: "/var/www/tu-app/current",
     script: "./index.js",
     node_args: "--import tsx",
     instances: "max",
