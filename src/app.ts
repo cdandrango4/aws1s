@@ -19,9 +19,12 @@ export const createApp = (): Application => {
     res.status(200).json({
       message: 'Práctica N.° 06 - Despliegue de aplicaciones Node.js en producción (AWS, Nginx, PM2)',
       estudiante: 'Christian Andrango',
+      version: '2.0.0 - CI/CD Pipeline Activo 🚀',
+      despliegue: 'Automático con PM2 Deploy y GitHub',
       status: 'UP',
       endpoints: [
         '/health',
+        '/api/v1/auth/login',
         '/api/v1/employees'
       ]
     });
