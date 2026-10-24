@@ -7,16 +7,12 @@ dotenv.config();
 const port = process.env.PORT || 3000;
 
 const startServer = async (): Promise<void> => {
-  try {
-    await connectDatabase();
-    app.listen(Number(port), '0.0.0.0', () => {
-      console.log(`🚀 Servidor ejecutándose en http://localhost:${port}`);
-      console.log(`📡 Endpoints disponibles en http://localhost:${port}/api/v1/employees`);
-    });
-  } catch (error) {
-    console.error('❌ Error al iniciar el servidor:', error);
-    process.exit(1);
-  }
+  app.listen(Number(port), '0.0.0.0', () => {
+    console.log(`🚀 Servidor ejecutándose en http://localhost:${port}`);
+    console.log(`📡 Endpoints disponibles en http://localhost:${port}/api/v1/employees`);
+  });
+
+  await connectDatabase();
 };
 
 startServer();
