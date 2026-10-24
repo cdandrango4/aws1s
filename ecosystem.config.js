@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: "mi-node-app",
-    script: "./src/index.ts",
+    script: "./index.js",
     node_args: "--import tsx",
     instances: "max",
     exec_mode: "cluster",
