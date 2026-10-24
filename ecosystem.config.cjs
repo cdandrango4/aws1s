@@ -10,7 +10,7 @@ module.exports = {
     env: {
       NODE_ENV: "production",
       PORT: 3000,
-      MONGODB_URI: "mongodb+srv://cdandrango_db_user:zez5iXeliG7dKokW@cluster0.tjfz0to.mongodb.net/gestion_empleados?retryWrites=true&w=majority&appName=Cluster0"
+      MONGODB_URI: "mongodb://127.0.0.1:27017/gestion_empleados"
     },
 
     error_file: "/var/www/tu-app/logs/err.log",
