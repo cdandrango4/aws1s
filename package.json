@@ -31,7 +31,6 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^26.6.1",
     "@types/supertest": "^7.2.1",
-    "@typescript/typescript6": "npm:typescript@5.8",
     "artillery": "^2.0.34",
     "jest": "^30.5.2",
     "mongodb-memory-server": "^11.3.0",
@@ -39,6 +38,6 @@
     "supertest": "^7.3.1",
     "ts-jest": "^29.4.15",
     "ts-node": "^10.9.2",
-    "typescript": "^7.0.2"
+    "typescript": "^5.8.2"
   }
 }
